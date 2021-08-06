@@ -32,11 +32,13 @@
     padding-left: 16px;
     color: var(--primary-text-white-color);
     outline: none;
-  }
-  .input-follow:focus,
-  .input-follow:hover {
+    
+    &:focus,
+  &:hover {
     border-color: rgba(255, 255, 255, 0.5);
   }
+  }
+  
   .button-follow {
     color: var(--primary-text-white-color);
     background-color: var(--accent-color);

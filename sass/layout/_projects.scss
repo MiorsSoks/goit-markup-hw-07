@@ -1,3 +1,6 @@
+.projects {
+  @extend %section-padding
+}
 .projects-list {
     display: flex;
     flex-wrap: wrap;
@@ -11,12 +14,14 @@
   .projects-link {
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .projects-list-item &:focus,
+    .projects-list-item &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
   }
-  .projects-list-item .projects-link:focus,
-  .projects-list-item .projects-link:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
+
   .content-projects {
     border: 1px solid #eeeeee;
     border-top: none;
@@ -56,8 +61,9 @@
   
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .projects-list-item .projects-link:focus .overlay,
-  .projects-list-item .projects-link:hover .overlay {
-    transform: translateY(0%);
+
+    .projects-list-item .projects-link:focus &,
+    .projects-list-item .projects-link:hover & {
+      transform: translateY(0%);
+    }
   }

@@ -1,3 +1,7 @@
+.team {
+  @extend %section-padding;
+  background-color: #f5f4fa;
+}
 .team-list {
     display: flex;
     margin-left: -30px;
